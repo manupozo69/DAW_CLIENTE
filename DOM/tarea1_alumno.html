@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tema 5 - Práctica DOM - Alumno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- CSS personalizado -->
+    <link href="custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1 class="display-4 text-primary mb-4">Tema 5 - Manipulación del DOM</h1>
+
+        <!-- Ejercicio 1 - EJEMPLO COMPLETADO -->
+        <div id="ej1" class="card mb-5">
+            <div class="card-header">
+                <h2 class="card-title h4 mb-0">Ejercicio 1 - Selectores y modificación</h2>
+            </div>
+            <div class="card-body">
+                <div id="contenido" class="mb-3">
+                    <p class="mb-2">Primer párrafo de ejemplo.</p>
+                    <p class="mb-2">Segundo párrafo de ejemplo.</p>
+                    <p class="mb-2">Tercer párrafo de ejemplo.</p>
+                </div>
+                <button id="btn-ej1" class="btn btn-primary">Aplicar cambios del Ejercicio 1</button>
+            </div>
+        </div>
+
+        <!-- Ejercicio 2 - Crear y eliminar nodos -->
+        <div id="ej2" class="card mb-5">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h2 class="card-title h4 mb-0">Ejercicio 2 - Crear y eliminar nodos</h2>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-3">Usa los botones para añadir un nuevo párrafo dentro de
+                    <code>#contenido</code> o
+                    eliminar el último.</p>
+                <div class="d-flex gap-2">
+                    <button id="btn-add" class="btn btn-success">Añadir párrafo</button>
+                    <button id="btn-remove" class="btn btn-outline-danger">Eliminar último párrafo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 3 - Manejo de eventos -->
+        <div id="ej3" class="card mb-5">
+            <div class="card-header">
+                <h2 class="card-title h4 mb-0">Ejercicio 3 - Eventos de ratón (hover)</h2>
+            </div>
+            <div class="card-body">
+                <p class="mb-0">Pasa el ratón por encima de los párrafos de <code>#contenido</code> para ver un efecto
+                    de resaltado. Los párrafos que añadas en el Ejercicio 2 también tendrán este comportamiento
+                    automáticamente.</p>
+            </div>
+        </div>
+
+        <!-- Ejercicio 4 - Inputs y actualización dinámica -->
+        <div id="ej4" class="card mb-5">
+            <div class="card-header">
+                <h2 class="card-title h4 mb-0">Ejercicio 4 - Inputs y actualización dinámica</h2>
+            </div>
+            <div class="card-body">
+                <form id="form-ej4" class="row gy-2 gx-2 align-items-center">
+                    <div class="col-12 col-md-8">
+                        <label for="nuevoTexto" class="form-label">Nuevo texto para el primer párrafo:</label>
+                        <input id="nuevoTexto" type="text" class="form-control" placeholder="Escribe aquí..." />
+                        <div id="msg-ej4" class="text-danger d-none mt-1">Por favor, introduce algún texto.</div>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex align-items-end">
+                        <button id="btn-cambiar" class="btn btn-primary w-100" type="submit">Cambiar texto</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Ejercicio 5 - Lista dinámica -->
+        <div id="ej5" class="card mb-5">
+            <div class="card-header">
+                <h2 class="card-title h4 mb-0">Ejercicio 5 - Lista de tareas</h2>
+            </div>
+            <div class="card-body">
+                <form id="form-tareas" class="row gy-2 gx-2 align-items-center">
+                    <div class="col-12 col-md-8">
+                        <label for="tareaInput" class="form-label">Nueva tarea:</label>
+                        <input id="tareaInput" type="text" class="form-control" placeholder="Ej.: Estudiar DOM" />
+                    </div>
+                    <div class="col-12 col-md-4 d-flex gap-2">
+                        <button id="btn-tarea" class="btn btn-success flex-fill" type="submit">Añadir tarea</button>
+                        <button id="btn-borrar-completadas" class="btn btn-outline-secondary flex-fill"
+                            type="button">Borrar completadas</button>
+                    </div>
+                </form>
+
+                <ul id="listaTareas" class="list-unstyled border rounded p-3 mt-3"></ul>
+                <p class="text-muted small mb-0 mt-2">Consejo: haz clic en una tarea para marcarla como completada.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main_alumno.js"></script>
+</body>
+
+</html>
