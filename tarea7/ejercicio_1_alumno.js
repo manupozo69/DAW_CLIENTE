@@ -49,7 +49,6 @@ document.getElementById('run-e3').addEventListener('click', function () {
 document.getElementById('run-e4').addEventListener('click', function () {
   function muestraMensaje(texto) {
     console.log(texto);
-    document.getElementById('out-e4').textContent = texto;
   }
   var mensaje = 'Hola, mundo';
   muestraMensaje(mensaje);
