@@ -101,10 +101,10 @@ document.getElementById('run-e7').addEventListener('click', function () {
 // Ejercicio 8 - Parámetros por defecto (plantilla)
 document.getElementById('run-e8').addEventListener('click', function () {
   const a = document.getElementById('a-e8').value;
-  function saludar(a) {
+  function saludar(a = 'invitado') {
     console.log(`Hola, ${a}`);
   }
-  saludar(a);
+  saludar(a || 'invitado');
 
 
 
@@ -116,7 +116,6 @@ document.getElementById('run-e8').addEventListener('click', function () {
 // Ejercicio 9 - Funciones anidadas (plantilla)
 document.getElementById('run-e9').addEventListener('click', function () {
   function externa() {
-    let contador = 0;
     contador++;
     function interna() {
       console.log(contador);
@@ -131,6 +130,7 @@ document.getElementById('run-e9').addEventListener('click', function () {
   // TODO: implementar función externa e interna
 
 });
+let contador = 0;
 
 // Ejercicio 10 - Métodos nativos (plantilla)
 document.getElementById('run-e10').addEventListener('click', function () {
